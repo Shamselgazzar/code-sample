@@ -5,10 +5,10 @@ adjustSIAccordingToStep(benefit: Benefit) {
       const lowerDivisible = Math.floor(benefit.benefitSumInsured / benefit.sumInsuredStep) * benefit.sumInsuredStep;
       const higherDifference = Math.abs(benefit.benefitSumInsured - higherDivisible);
       const lowerDifference = Math.abs(benefit.benefitSumInsured - lowerDivisible);
-      if (higherDifference < lowerDifference) {
-        benefit.benefitSumInsured = higherDivisible;
-      } else {
+      if (lowerDifference < higherDifference) {
         benefit.benefitSumInsured = lowerDivisible;
+      } else {
+        benefit.benefitSumInsured = higherDivisible;
       }
     }
   } else {

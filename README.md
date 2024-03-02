@@ -1,0 +1,1 @@
+This method ensures that the sum insured value aligns with a specified step. If the sum insured does not align with the step, it is rounded to the nearest value that is divisible by the step. If the step is zero, an error message is logged.
